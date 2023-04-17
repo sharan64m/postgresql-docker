@@ -1,0 +1,14 @@
+version: '3'
+services:
+  db:
+    image: postgres:14
+    container_name: postgresql
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=saran
+      - POSTGRES_PASSWORD=saran123
+      - POSTGRES_DB=saran_db
+    volumes:
+      - ./data:/var/lib/postgresql/data
